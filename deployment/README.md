@@ -80,6 +80,43 @@ minikube service result
 - `redis-service.yaml`
 - `db-deployment.yaml`
 - `db-service.yaml`
+- `ingress.yaml`
+
+---
+
+## 🌐 Exposing Services with Ingress
+
+You can use the provided `ingress.yaml` to expose your services via a single external endpoint and custom paths.
+
+### 1. Enable Ingress in Minikube
+
+```sh
+minikube addons enable ingress
+```
+
+### 2. Apply the Ingress Resource
+
+```sh
+kubectl apply -f ingress.yaml
+```
+
+### 3. Update Your Hosts File (Optional)
+
+Add the following line to your `/etc/hosts` file to map the custom domain to Minikube's IP:
+
+```
+<minikube-ip> vote-result.com
+```
+
+Replace `<minikube-ip>` with the output of `minikube ip`.
+
+### 4. Access the Vote App
+
+Open in your browser:
+
+```
+http://vote-result.com/lets-vote
+```
 
 ---
 
