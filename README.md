@@ -1,4 +1,4 @@
-# 🗳️ Example Voting App on Kubernetes
+# 🗳️ Deploying Multi Microservice App on Kubernetes
 
 A simple distributed voting application deployed on Kubernetes, demonstrating microservices, service discovery, and persistent storage. This project uses **Pods** and **Services** for each component and is designed for local development with **Minikube**.
 
